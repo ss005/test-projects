@@ -1,0 +1,4 @@
+enum Beer {
+	RC, KF ;
+}
+

@@ -1,0 +1,8 @@
+com/test/soapjaxwsspring/ObjectFactory.class
+com/test/soapjaxwsspring/package-info.class
+com/test/soapjaxwsspring/CustomerServiceRequestType.class
+com/test/soapjaxwsspring/Customer.class
+com/test/soapjaxwsspring/CustomerServicePortType.class
+com/test/soapjaxwsspring/CustomerServiceResponseType.class
+com/test/soapjaxwsspring/CustomerService.class
+com/test/service/CustomerServiceImpl.class

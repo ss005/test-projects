@@ -22,11 +22,7 @@ public class MessageResourse {
 		
 		System.out.println("All messages from Mayank are :" );
 		List<Message> messages = MessageService.getAllMessages();
-		
-		/***
-		//VERY VERY IMPORTANT - USING PARALLEL STREAM YOU CAN SEE THAT SORTING IS NOT WORKING .... :P:P:P
-		 * 
-		 */
+
 		//messages.parallelStream()
 		
 		messages.stream()
