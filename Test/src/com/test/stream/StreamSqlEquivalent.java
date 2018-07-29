@@ -1,7 +1,10 @@
 package com.test.stream;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StreamSqlEquivalent {
 	public static void main(String[] args) {
@@ -37,9 +40,17 @@ public class StreamSqlEquivalent {
 		System.out.println("4-----------------------");
 		//List list2 = list.stream().sorted().collect();
 		
-		System.out.println("This is eclipse photon");
+
 		
+		Map<Integer, Person> personMap = list
+		.stream()
+		.filter( p -> p.getAge() > 26 )
+		.collect(Collectors.toMap( p1 -> ((Person)p1).getAge(), p2 -> p2));
 			
+		
+		for (Map.Entry<Integer, Person> entry : personMap.entrySet()) {
+			System.out.println(entry.getKey() + " : " + entry.getValue());
+		}
 		
 		
 	}
@@ -90,7 +101,7 @@ class Person {
 }
 
 interface Default1 {
-	public default void defaultMethod() {
+	default void defaultMethod() {
 		
 	}
 }

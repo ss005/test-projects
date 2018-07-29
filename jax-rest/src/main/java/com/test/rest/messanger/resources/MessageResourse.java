@@ -26,7 +26,7 @@ public class MessageResourse {
 		//messages.parallelStream()
 		
 		messages.stream()
-				.filter((message) -> message.getFrom().compareToIgnoreCase("Mayank") == 0 ? true :false )
+				.filter((message) -> message.getFrom().compareToIgnoreCase("Mayank") == 0)
 				//.sorted((m1, m2) -> String.valueOf(m1.getId()).compareTo(String.valueOf(m2.getId())))
 				.sorted((m1, m2) -> Integer.compare(m2.getId(), m1.getId()))
 				.forEach(System.out::println);
@@ -35,7 +35,7 @@ public class MessageResourse {
 		System.out.println("-------------------");
 		
 		messages.parallelStream()
-		.filter((message) -> message.getFrom().compareToIgnoreCase("Mayank") == 0 ? true :false )
+		.filter((message) -> message.getFrom().compareToIgnoreCase("Mayank") == 0)
 		//.sorted((m1, m2) -> String.valueOf(m1.getId()).compareTo(String.valueOf(m2.getId())))
 		.sorted((m1, m2) -> Integer.compare(m2.getId(), m1.getId()))
 		.forEachOrdered(System.out::println);

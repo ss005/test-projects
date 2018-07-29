@@ -30,11 +30,11 @@ class ProducerConsumer {
 
 	public void produce() {
 		
-		
+		System.out.println("Inside producer...");
 
 	}
 
 	public void consume() {
-
+		System.out.println("Inside consumer...");
 	}
 }

@@ -9,7 +9,7 @@ import com.test.springaop.dao.AccountDAO;
 public class MainDemoApp {
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(DemoConfig.class);
-		AccountDAO accountDAO = (AccountDAO) context.getBean("accountDAO", AccountDAO.class);
+		AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 		
 		accountDAO.addAccount();
 		

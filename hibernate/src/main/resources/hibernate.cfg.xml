@@ -14,7 +14,7 @@
 			<property name="connection.password">sa</property>
 
 			<!--  automatically create table  -->
-			<property name="hbm2ddl.auto">create</property>
+			<!--<property name="hbm2ddl.auto">create</property>-->
 
 			<!-- jdbc connection pool settings -->
 			<property name="connection.pool_size">1</property>

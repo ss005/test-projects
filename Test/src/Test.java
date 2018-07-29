@@ -16,7 +16,7 @@ public class Test {
 	public static void main(String[] args) {
 		List<Integer> numbers = Arrays.asList(1, 5, 3, 3, 100 );
 		
-		numbers.stream().map( i -> (int) i * 5 ).filter(i -> (int)i > 10 ).forEach(i -> System.out.println(i));
+		numbers.stream().map( i -> i * 5 ).filter(i -> i > 10 ).forEach(i -> System.out.println(i));
 		System.out.println(List.class);
 	
 		List<Person > persons = new ArrayList<>();

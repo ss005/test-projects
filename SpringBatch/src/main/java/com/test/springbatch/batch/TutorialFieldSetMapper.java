@@ -7,7 +7,7 @@ import org.springframework.validation.BindException;
 public class TutorialFieldSetMapper implements FieldSetMapper<Tutorial> {
 
 	@Override
-	public Tutorial mapFieldSet(FieldSet fieldSet) throws BindException {
+	public Tutorial mapFieldSet(FieldSet fieldSet) {
 		Tutorial tutorial = new Tutorial();
 		tutorial.setTutorial_id(fieldSet.readInt(0));
 		tutorial.setTutorial_title(fieldSet.readString(1));

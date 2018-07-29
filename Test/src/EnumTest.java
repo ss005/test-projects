@@ -1,4 +1,4 @@
 enum Beer {
-	RC, KF ;
+	RC, KF
 }
 

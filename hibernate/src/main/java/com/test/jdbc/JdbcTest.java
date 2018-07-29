@@ -11,8 +11,8 @@ public class JdbcTest {
 
 	// Driver name and url
 	static final String JDBC_DRIVER = "org.h2.Driver";
-	//static final String JDBC_URL = "jdbc:h2:~/test";
-	static final String JDBC_URL = "jdbc:h2:@127.0.1.1:8082";
+	static final String JDBC_URL = "jdbc:h2:~/test;AUTO_SERVER=TRUE";
+	//static final String JDBC_URL = "jdbc:h2:@127.0.1.1:8082";
 	
 	
 
@@ -33,6 +33,7 @@ public class JdbcTest {
 			// PASSWORD)) {}
 			Connection conn = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
 			System.out.println("connection successfull...");
+			conn.close();
 
 		} catch (SQLException | ClassNotFoundException exception) {
 			System.out.println("exeption while creating h2 database connection ");

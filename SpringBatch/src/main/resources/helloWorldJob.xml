@@ -49,7 +49,7 @@
 	<!-- Writer -->
 	<bean id="xmlWriter"
 		class="org.springframework.batch.item.xml.StaxEventItemWriter">
-		<property name="resource" value="file:output/reports.xml"></property>
+		<property name="resource" value="file:reports.xml"></property>
 		<property name="marshaller" ref="reportMarshaller"></property>
 		<property name="rootTagName" value="report"></property>
 	</bean>

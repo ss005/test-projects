@@ -1,0 +1,9 @@
+com/test/mvchbnrest/dao/BookDao.class
+com/test/mvchbnrest/config/WebConfig.class
+com/test/mvchbnrest/service/BookServiceImp.class
+com/test/mvchbnrest/controller/BookController.class
+com/test/mvchbnrest/config/AppConfig.class
+com/test/mvchbnrest/service/BookService.class
+com/test/mvchbnrest/entity/Book.class
+com/test/mvchbnrest/dao/BookDaoImp.class
+com/test/mvchbnrest/config/MyWebAppInitializer.class
