@@ -16,7 +16,7 @@ public class ProducerConsumer {
 }
 
 class Pojo {
-	int num = 0;
+	volatile int num = 0;
 
 	public void set() {
 		while (true) {

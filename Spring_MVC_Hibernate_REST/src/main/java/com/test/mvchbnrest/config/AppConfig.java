@@ -22,7 +22,7 @@ import static org.hibernate.cfg.AvailableSettings.SHOW_SQL;
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScans(value = { @ComponentScan("com.test.mvchbnrest"),
-      @ComponentScan("com.test.mvchbnrest.service") })
+@ComponentScan("com.test.mvchbnrest.service") })
 public class AppConfig {
 
    @Autowired

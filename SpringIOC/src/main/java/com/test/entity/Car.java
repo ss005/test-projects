@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-public class Car {
+public class Car implements Vehicle {
     private String model;
     private int capacity;
 
@@ -36,4 +36,8 @@ public class Car {
         return capacity;
     }
 
+    @Override
+    public void horn() {
+        System.out.println("Car :: horn sound...");
+    }
 }

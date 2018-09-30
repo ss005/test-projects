@@ -44,6 +44,11 @@
             <artifactId>jaxws-rt</artifactId>
             <version>2.2.8</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.cxf.xjc-utils</groupId>
+            <artifactId>cxf-xjc-runtime</artifactId>
+            <version>2.7.0</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>SOAP_JAXWS_Spring</finalName>
@@ -56,7 +61,8 @@
                     <wsdlDirectory>${basedir}/src/main/resources/wsdl</wsdlDirectory>
                     <packageName>com.test.soapjaxwsspring</packageName>
                     <keep>true</keep>
-                    <sourceDestDir>${basedir}/target/generated/src/main/java</sourceDestDir>
+                    <!--<sourceDestDir>${basedir}/target/generated/src/main/java</sourceDestDir>-->
+                    <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
                     <sei/>
                 </configuration>
                 <executions>
@@ -68,6 +74,31 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!--<plugin>-->
+                <!--<groupId>org.apache.cxf</groupId>-->
+                <!--<artifactId>cxf-codegen-plugin</artifactId>-->
+                <!--<version>2.7.0</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>generate-sources</id>-->
+                        <!--<phase>generate-sources</phase>-->
+                        <!--<configuration>-->
+                            <!--&lt;!&ndash;<sourceRoot>${project.build.directory}/generated/cxf</sourceRoot>&ndash;&gt;-->
+                            <!--<sourceRoot>${project.build.directory}/src/main/java/com/test/soapjaxwsspring</sourceRoot>-->
+                            <!--<wsdlOptions>-->
+                                <!--<wsdlOption>-->
+                                    <!--<wsdl>${basedir}/src/main/resources/wsdl/customerService.wsdl</wsdl>-->
+                                <!--</wsdlOption>-->
+                            <!--</wsdlOptions>-->
+                        <!--</configuration>-->
+                        <!--<goals>-->
+                            <!--<goal>wsdl2java</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+
         </plugins>
     </build>
 

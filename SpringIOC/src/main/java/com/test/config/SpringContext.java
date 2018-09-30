@@ -1,5 +1,6 @@
 package com.test.config;
 
+import com.test.entity.Car;
 import com.test.entity.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,6 +15,10 @@ public class SpringContext {
         return  new Person();
     }
 
+    @Bean
+    public Car car() {
+        return  new Car();
+    }
 
 
 }

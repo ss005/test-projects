@@ -30,6 +30,7 @@ public class CreateStudentDemo {
 			// save student object
 			System.out.println("creating student object in table ");
 			session.save(student);
+			student.setLastName("Singh");
 
 			Student student2 = new Student("Mayank", "Yadav", "mayank@gmail.com");
 			session.save(student2);

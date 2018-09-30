@@ -1,7 +1,7 @@
 package com.test.springApp;
 
 import com.test.config.SpringContext;
-import com.test.entity.Person;
+import com.test.entity.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -15,5 +15,18 @@ public class AppJavaConfig {
         Person person2 = (Person) context.getBean("person2");
         System.out.println(person2);
         System.out.println(person2.getCar());
+
+        //Vehicle vehicle = context.getBean("car", Vehicle.class);
+        Vehicle vehicle = context.getBean("car", Car.class) ;
+        vehicle.horn();
+
+        System.out.println("Checking for cyclic dependency...");
+
+        BeanA beanA = (BeanA) context.getBean(BeanA.class);
+        BeanB beanB = (BeanB) context.getBean(BeanB.class) ;
+
+
+
+
     }
 }

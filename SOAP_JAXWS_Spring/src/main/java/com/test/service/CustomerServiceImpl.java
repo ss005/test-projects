@@ -10,8 +10,11 @@ import javax.jws.WebService;
 @WebService(endpointInterface = "com.test.soapjaxwsspring.CustomerServicePortType")
 public class CustomerServiceImpl implements CustomerServicePortType {
 
+    private CustomerServiceRequestType customerServiceRequest;
+
     public CustomerServiceResponseType getCustomer(
             CustomerServiceRequestType customerServiceRequest) {
+        this.customerServiceRequest = customerServiceRequest;
         final CustomerServiceResponseType response = new CustomerServiceResponseType();
         Customer customer = new Customer();
         customer.setId(123);

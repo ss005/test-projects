@@ -2,7 +2,6 @@ package com.test.springApp;
 
 import com.test.entity.Person;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AppXmlConfig {
@@ -43,7 +42,7 @@ public class AppXmlConfig {
 		System.out.println(">>>" + person2.getCar());
 		
 		
-		((ConfigurableApplicationContext)context).close();
+		((ClassPathXmlApplicationContext) context).close();
 		
 		
 		

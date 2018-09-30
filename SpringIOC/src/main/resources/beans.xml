@@ -11,7 +11,7 @@
     <!-- Person -->
     <bean id="person0" class="com.test.entity.Person" autowire="byName">
         <!--<constructor-arg>-->
-            <!--<ref bean="car"></ref>-->
+        <!--<ref bean="car"></ref>-->
         <!--</constructor-arg>-->
         <!--<lookup-method name="getCar" bean="car"/>-->
         <property name="name" value="Amit"></property>
