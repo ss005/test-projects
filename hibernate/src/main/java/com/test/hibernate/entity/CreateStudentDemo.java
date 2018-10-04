@@ -2,6 +2,7 @@ package com.test.hibernate.entity;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
@@ -25,18 +26,22 @@ public class CreateStudentDemo {
 			Student student = new Student("Sanjay", "Kumar", "sanjay@gmail.com");
 
 			// begin transactiond
-			session.beginTransaction();
+			Transaction tx = session.beginTransaction();
 
 			// save student object
 			System.out.println("creating student object in table ");
 			session.save(student);
 			student.setLastName("Singh");
+			//session.close();
 
-			Student student2 = new Student("Mayank", "Yadav", "mayank@gmail.com");
-			session.save(student2);
+			//Student student2 = new Student("Mayank", "Yadav", "mayank@gmail.com");
+			//session.save(student2);
 
 			//close the session
-			session.getTransaction().commit();
+			//session.getTransaction().commit();
+			tx.commit();
+
+			session.close();
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 

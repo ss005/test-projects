@@ -1,4 +1,0 @@
-enum Beer {
-	RC, KF
-}
-
