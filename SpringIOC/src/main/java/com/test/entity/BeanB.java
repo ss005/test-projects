@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 public class BeanB {
     BeanA beanA;
 
-    @Autowired
-    public BeanB(BeanA beanA) {
-        this.beanA = beanA;
-    }
+//    @Autowired
+//    public BeanB(BeanA beanA) {
+//        this.beanA = beanA;
+//    }
 }

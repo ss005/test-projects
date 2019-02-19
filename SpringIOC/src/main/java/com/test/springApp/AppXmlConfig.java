@@ -13,7 +13,19 @@ public class AppXmlConfig {
 //		person.greet();
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml") ;
-		
+
+		System.out.println("person.....");
+		Person person11 = (Person)context.getBean("person");
+		System.out.println(person11);
+
+		System.out.println("person2.....");
+		Person person2 = (Person) context.getBean("person2");
+		System.out.println(person2);
+
+
+
+
+
 		System.out.println("\n person::getBean 1");
 		Person person = (Person) context.getBean("person") ;
 		System.out.println(person);
@@ -37,7 +49,7 @@ public class AppXmlConfig {
 		System.out.println(">>>" + person1.getCar());
 
         System.out.println("\n person::getbean 3");
-		Person person2 = (Person)context.getBean("person");
+		Person person12 = (Person)context.getBean("person");
 		System.out.println(person2);
 		System.out.println(">>>" + person2.getCar());
 		

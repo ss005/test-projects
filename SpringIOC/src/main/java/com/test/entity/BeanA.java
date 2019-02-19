@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 public class BeanA {
     BeanB beanB ;
 
-    @Autowired
-    public BeanA(BeanB beanB) {
-        this.beanB = beanB;
-    }
+//    @Autowired
+//    public BeanA(BeanB beanB) {
+//        this.beanB = beanB;
+//    }
 
 }

@@ -9,7 +9,7 @@
     <!-- <context:component-scan base-package="com.test.springAppApp" /> -->
 
     <!-- Person1 -->
-    <bean id="person0" class="com.test.entity.Person1" autowire="byName">
+    <bean id="person" class="com.test.entity.Person" autowire="byName">
         <!--<constructor-arg>-->
         <!--<ref bean="car"></ref>-->
         <!--</constructor-arg>-->
@@ -30,6 +30,9 @@
         </property>
 
     </bean>
+
+
+    <bean id="person2" class="com.test.entity.Person" autowire="byName"/>
 
 
     <!-- Car -->
