@@ -26,6 +26,13 @@ public class SpringCoreApplication {
 
         /*System.out.println(a + " " + b);
         System.out.println(a.getB());*/
+
+
+        D d = (D)configContext.getBean("d");
+
+        System.out.println(d.getC().getS());
+        d.getC().setS("test_changed");
+        System.out.println(d.getC().getS());
     }
 }
 
